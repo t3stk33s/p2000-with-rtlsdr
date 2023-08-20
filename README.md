@@ -1,4 +1,4 @@
-# p2000 / semafoon berichten -with-rtlsdr
+# pocsag / p2000 (dutch pager system) / semafoon berichten -with-rtlsdr
 p2000 berichten decoderen met linux en een rtl_sdr stick,
 
 wat heb je nodig
@@ -20,12 +20,7 @@ rtl_fm -o 4 -A lut  -s 22050  -f 169.650M - | multimon-ng -t raw  -a POCSAG512 -
 
 voor andere semafoon berichten te ontvangen verander dan de frequentie naar 172.450 dus
 rtl_fm -o 4 -A lut  -s 22050  -f 172.450M - | multimon-ng -t raw  -a POCSAG512 -a POCSAG1200 -a POCSAG2400 -a FSK9600 -a FLEX -f alpha /dev/stdin
-
-
-
-rtl_fm -o 4 -A lut  -s 22050  -f 172.450M - | multimon-ng -t raw  -a POCSAG512 -a POCSAG1200 -a POCSAG2400 -a FSK9600 -a FLEX -f alpha /dev/stdin
-
-
+rtl_fm -o 4 -A lut  -s 22050  -f <change for your frequntie> - | multimon-ng -t raw  -a POCSAG512 -a POCSAG1200 -a POCSAG2400 -a FSK9600 -a FLEX -f alpha /dev/stdin
 
 multimon-ng is the successor of multimon. It decodes the following digital transmission modes:
 
